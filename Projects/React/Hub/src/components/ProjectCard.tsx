@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Project } from '../types';
-import { ExternalLinkIcon, GithubIcon, CartIcon, DocumentIcon, GamepadIcon, MusicIcon, CheckCircleIcon } from './Icons';
+import { ExternalLinkIcon, GithubIcon, CodeBracketIcon, CartIcon, DocumentIcon, GamepadIcon, MusicIcon, CheckCircleIcon } from './Icons';
 import styles from '../styles/Projects.module.css';
 
 interface ProjectCardProps {
@@ -9,9 +9,9 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     const baseUrl = import.meta.env.BASE_URL;
-    const demoUrl = project.isExternal 
-        ? (project.externalUrl || project.repoPath) 
-        : `${baseUrl}${project.demoPath}`;
+    const hasDemo = Boolean(project.demoPath);
+    const demoUrl = project.isExternal ? project.demoPath : `${baseUrl}${project.demoPath}`;
+    const SourceIcon = project.repoPath.includes('github.com') ? GithubIcon : CodeBracketIcon;
 
     const renderIcon = () => {
         switch (project.iconType) {
@@ -62,26 +62,26 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 ))}
             </div>
 
-            <div className={styles.cardActions}>
-                <a
+            <div className={`${styles.cardActions} ${hasDemo ? '' : styles.sourceOnly}`} >
+                {hasDemo && <a
                     href={demoUrl}
                     target={project.isExternal ? '_blank' : undefined}
                     rel={project.isExternal ? 'noopener noreferrer' : undefined}
                     className={`btn btnPrimary ${styles.btnDemo}`}
                     title={`Explore ${project.title}`}
                 >
-                    <span>{project.isExternal ? 'Explore Project' : 'Open Application'}</span>
+                    <span>Open Application</span>
                     <ExternalLinkIcon size={15} />
-                </a>
+                </a>}
                 <a
                     href={project.repoPath}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`btn btnSecondary ${styles.btnSource}`}
-                    title={`View ${project.title} on GitHub`}
+                    className={`btn ${hasDemo ? 'btnSecondary' : 'btnPrimary'} ${styles.btnSource}`}
+                    aria-label={`View source for ${project.title}`}
                 >
-                    <GithubIcon size={15} />
-                    <span>Source</span>
+                    <SourceIcon size={15} />
+                    <span>{hasDemo ? 'Source' : 'View Source Code'}</span>
                 </a>
             </div>
         </article>

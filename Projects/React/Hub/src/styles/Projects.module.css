@@ -159,3 +159,17 @@
     padding: 0.65rem 0.85rem;
     font-size: 0.875rem;
 }
+
+.sourceOnly { grid-template-columns: 1fr; }
+.projectCard:focus-within { border-color: var(--color-border-hover); }
+.techTag { transition: var(--transition-colors); }
+.techTag:hover { background-color: rgba(56,189,248,.08); border-color: var(--color-border-hover); }
+.cardIcon { transition: transform .25s var(--ease-standard); }
+@media(hover: hover) { .projectCard:hover .cardIcon { transform: translateY(-2px); } }
+@media(max-width: 540px) {
+    .projectCard { padding: 1.5rem 1.25rem; }
+    .projectTitle { font-size: 1.25rem; }
+    .cardActions { grid-template-columns: 1fr; }
+    .projectDesc { min-height: 0; }
+}
+@media(hover: none) { .projectCard:hover { transform: none; } }

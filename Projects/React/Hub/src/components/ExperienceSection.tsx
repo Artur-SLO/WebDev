@@ -1,31 +1,28 @@
 import React from 'react';
-import { 
-    EXPERIENCES, 
-    EDUCATION, 
-    LINKEDIN_URL, 
-    MARVIN_REPO_URL, 
-    STUDEX_REPO_URL, 
-    FACE_RECOG_REPO_URL, 
-    DELTASONG_REPO_URL 
+import {
+    EXPERIENCES,
+    EDUCATION,
+    LINKEDIN_URL,
+    MARVIN_REPO_URL
 } from '../data/projects';
-import { 
-    BriefcaseIcon, 
-    AcademicCapIcon, 
-    CheckCircleIcon, 
-    LinkedinIcon, 
-    ExternalLinkIcon 
+import {
+    BriefcaseIcon,
+    AcademicCapIcon,
+    CheckCircleIcon,
+    LinkedinIcon,
+    ExternalLinkIcon
 } from './Icons';
 import commonStyles from '../styles/Common.module.css';
 import styles from '../styles/Experience.module.css';
 
 export const ExperienceSection: React.FC = () => {
     return (
-        <section id="experience" className={styles.experienceSection}>
+        <section id="experience" tabIndex={-1} className={styles.experienceSection}>
             <div className={commonStyles.sectionHeader}>
                 <span className={commonStyles.sectionEyebrow}>Career & Academic Journey</span>
                 <h2 className={commonStyles.sectionTitle}>Experience & Education</h2>
                 <p className={commonStyles.sectionSubtitle}>
-                    Hands-on engineering in enterprise university systems, applied research, 
+                    Hands-on engineering in enterprise university systems, applied research,
                     and rigorous theoretical foundations in Computer Science.
                 </p>
             </div>
@@ -69,19 +66,19 @@ export const ExperienceSection: React.FC = () => {
                         </div>
 
                         <div className={styles.cardAction} style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-                            <a 
-                                href={MARVIN_REPO_URL} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href={MARVIN_REPO_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className={styles.linkedInBtn}
                             >
                                 <ExternalLinkIcon size={16} />
                                 <span>Marvin Repository (GitLab)</span>
                             </a>
-                            <a 
-                                href={LINKEDIN_URL} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href={LINKEDIN_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className={styles.linkedInBtn}
                             >
                                 <LinkedinIcon size={16} />
@@ -130,89 +127,7 @@ export const ExperienceSection: React.FC = () => {
                 ))}
             </div>
 
-            {/* Systems Architecture Spotlight */}
-            <div className={styles.recruiterSpotlight}>
-                <div className={styles.spotlightHeader}>
-                    <h4 className={styles.spotlightTitle}>
-                        Core Systems & Engineering Highlights
-                    </h4>
-                    <a 
-                        href={LINKEDIN_URL} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className={styles.linkedInBtn}
-                    >
-                        <LinkedinIcon size={14} />
-                        <span>LinkedIn Network</span>
-                    </a>
-                </div>
 
-                <div className={styles.spotlightGrid}>
-                    <a 
-                        href={MARVIN_REPO_URL} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className={styles.spotlightCard}
-                    >
-                        <div className={styles.spotlightCardTop}>
-                            <h5 className={styles.spotlightProjectTitle}>Marvin (LabES - UFES)</h5>
-                            <ExternalLinkIcon size={14} className={styles.spotlightLinkIcon} />
-                        </div>
-                        <span className={styles.spotlightProjectTech}>Java · Jakarta EE · WildFly · MinIO</span>
-                        <p className={styles.spotlightProjectDesc}>
-                            Production university management system for teaching and research with transactional PostgreSQL persistence and S3 object storage via MinIO.
-                        </p>
-                    </a>
-
-                    <a 
-                        href={STUDEX_REPO_URL} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className={styles.spotlightCard}
-                    >
-                        <div className={styles.spotlightCardTop}>
-                            <h5 className={styles.spotlightProjectTitle}>Studex</h5>
-                            <ExternalLinkIcon size={14} className={styles.spotlightLinkIcon} />
-                        </div>
-                        <span className={styles.spotlightProjectTech}>Python · Flask · Qdrant · Ollama</span>
-                        <p className={styles.spotlightProjectDesc}>
-                            AI study platform with hybrid RAG (vector + BM25 search), PyMuPDF document extraction, and local LLM inference (Llama 3.2 and Qwen).
-                        </p>
-                    </a>
-
-                    <a 
-                        href={FACE_RECOG_REPO_URL} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className={styles.spotlightCard}
-                    >
-                        <div className={styles.spotlightCardTop}>
-                            <h5 className={styles.spotlightProjectTitle}>Face Recognition</h5>
-                            <ExternalLinkIcon size={14} className={styles.spotlightLinkIcon} />
-                        </div>
-                        <span className={styles.spotlightProjectTech}>OpenCV · dlib · WebSockets · React</span>
-                        <p className={styles.spotlightProjectDesc}>
-                            Continuous real-time facial biometrics streaming via full-duplex WebSockets with dlib embeddings and strict LGPD compliance.
-                        </p>
-                    </a>
-
-                    <a 
-                        href={DELTASONG_REPO_URL} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className={styles.spotlightCard}
-                    >
-                        <div className={styles.spotlightCardTop}>
-                            <h5 className={styles.spotlightProjectTitle}>Deltasong</h5>
-                            <ExternalLinkIcon size={14} className={styles.spotlightLinkIcon} />
-                        </div>
-                        <span className={styles.spotlightProjectTech}>React 19 · Firebase · Mantine UI</span>
-                        <p className={styles.spotlightProjectDesc}>
-                            Interactive full-stack audio game with millisecond snippet slicing, Firebase Firestore authentication, and real-time leaderboards.
-                        </p>
-                    </a>
-                </div>
-            </div>
         </section>
     );
 };

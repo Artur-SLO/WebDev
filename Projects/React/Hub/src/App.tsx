@@ -7,18 +7,19 @@ import { ProjectsSection } from './components/ProjectsSection';
 import { GithubActivitySection } from './components/GithubActivitySection';
 import { PillarsSection } from './components/PillarsSection';
 import { Footer } from './components/Footer';
+import { Reveal } from './components/Reveal';
 import commonStyles from './styles/Common.module.css';
 
 export const App: React.FC = () => {
     return (
         <PageWrapper>
             <Navbar />
-            <main className={commonStyles.homeContainer}>
-                <Hero />
-                <ExperienceSection />
+            <main id="main" tabIndex={-1} className={commonStyles.homeContainer}>
+                <Reveal><Hero /></Reveal>
                 <ProjectsSection />
-                <GithubActivitySection />
-                <PillarsSection />
+                <Reveal><ExperienceSection /></Reveal>
+                <Reveal><PillarsSection /></Reveal>
+                <Reveal><GithubActivitySection /></Reveal>
             </main>
             <Footer />
         </PageWrapper>

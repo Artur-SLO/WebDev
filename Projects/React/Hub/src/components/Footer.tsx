@@ -13,8 +13,8 @@ export const Footer: React.FC = () => {
                         <span>Artur Vítor · Portfolio</span>
                     </div>
                     <p className={styles.brandText}>
-                        Documenting practical software engineering across enterprise systems (Marvin), 
-                        AI & hybrid RAG platforms (Studex), real-time biometrics (Face Recognition), 
+                        Documenting practical software engineering across enterprise systems (Marvin),
+                        AI & RAG platforms (Studex), real-time biometrics (Face Recognition),
                         and modern interactive web applications.
                     </p>
                 </div>
@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
                         <span className={styles.stackBadge}>Python & Flask</span>
                         <span className={styles.stackBadge}>Qdrant Vector DB</span>
                         <span className={styles.stackBadge}>Ollama & RAG</span>
-                        <span className={styles.stackBadge}>OpenCV & WebSockets</span>
+                        <span className={styles.stackBadge}>OpenCV & TCP Sockets</span>
                         <span className={styles.stackBadge}>React 19 & TypeScript</span>
                         <span className={styles.stackBadge}>Docker & Compose</span>
                         <span className={styles.stackBadge}>GitHub Actions CI/CD</span>

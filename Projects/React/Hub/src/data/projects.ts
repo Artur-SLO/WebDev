@@ -10,219 +10,251 @@ export const DELTASONG_REPO_URL = 'https://github.com/Artur-SLO/Deltasong';
 export const DELTASONG_LIVE_URL = 'https://artur-slo.github.io/Deltasong/';
 
 export const USER_PROFILE = {
-    name: 'Artur Vítor',
-    role: 'Computer Science Undergraduate @ UFES · Software Engineering Intern @ LabES',
-    headline: 'Computer Science Undergraduate & Software Developer',
-    location: 'Vitória, Espírito Santo, Brazil',
-    linkedin: LINKEDIN_URL,
-    github: GITHUB_PROFILE_URL,
-    summary: 'Computer Science undergraduate student at Universidade Federal do Espírito Santo (UFES) and Software Engineering Intern at the Software Engineering Laboratory (LabES - UFES). Practical experience building enterprise systems (Marvin in Java/Jakarta EE), AI platforms with RAG pipelines and local LLMs (Studex), real-time biometric systems with LGPD compliance (Face Recognition), and modern responsive web applications.',
+    "name": "Artur Vítor",
+    "role": "Computer Science Undergraduate @ UFES · Software Engineering Intern @ LabES",
+    "headline": "Computer Science Undergraduate & Software Developer",
+    "location": "Vitória, Espírito Santo, Brazil",
+    "linkedin": "https://www.linkedin.com/in/artur-v%C3%ADtor-a7a375401/",
+    "github": "https://github.com/Artur-SLO",
+    "summary": "Computer Science undergraduate at UFES and Software Engineering Intern at LabES. I build React interfaces, Java enterprise services, and Python applications for retrieval-augmented generation and computer vision."
 };
 
 export const EXPERIENCES: ExperienceItem[] = [
     {
-        role: 'Software Engineering Intern',
-        company: 'LabES - UFES',
-        period: 'May 2026 – Present · 5 mos',
-        location: 'Vitória, Espírito Santo, Brazil · On-site',
-        type: 'Internship / Scholarship',
-        description: 'Development and maintenance of Marvin, an enterprise university web management system for academic, research, and teaching workflows at UFES.',
-        highlights: [
-            'Enterprise architecture built with Java and Jakarta EE running on WildFly application server',
-            'Transactional relational modeling and persistence with PostgreSQL and structured migrations',
-            'Academic file and document storage management via MinIO with AWS S3-compatible API',
-            'Build lifecycle automation with Apache Maven and container orchestration using Docker',
-            'Collaborative version control and peer code reviews utilizing Git and GitLab',
+        "role": "Software Engineering Intern",
+        "company": "LabES - UFES",
+        "period": "Aug 2026 – Present",
+        "location": "Vitória, Espírito Santo, Brazil · On-site",
+        "type": "Internship / Scholarship",
+        "description": "Contributing to Marvin, UFES’s platform for academic administration, research, and outreach, as part of the LabES Scrum team.",
+        "highlights": [
+            "Developing Java EE / Jakarta EE application flows with JSF, PrimeFaces, EJB, CDI, and JPA / Hibernate on WildFly.",
+            "Working with access controls, CDI events, and MinIO / S3 document storage to connect modules and manage academic documents.",
+            "Writing isolated business-logic tests with JUnit 5 and Mockito, alongside collaborative code reviews."
         ],
-        skills: ['Java', 'Jakarta EE', 'WildFly', 'PostgreSQL', 'Maven', 'MinIO (S3 API)', 'Git', 'Docker'],
-        link: MARVIN_REPO_URL,
-    },
+        "skills": [
+            "Java",
+            "Jakarta EE",
+            "CDI / EJB",
+            "JPA / Hibernate",
+            "JUnit 5",
+            "Mockito",
+            "Scrum"
+        ],
+        "link": "https://gitlab.labes.inf.ufes.br/marvin/marvin"
+    }
 ];
 
 export const EDUCATION: EducationItem[] = [
     {
-        degree: 'B.S. in Computer Science (Undergraduate)',
-        institution: 'Universidade Federal do Espírito Santo (UFES)',
-        location: 'Vitória, Espírito Santo, Brazil',
-        status: 'In Progress',
-        description: 'Rigorous academic curriculum with focus on computer systems architecture, algorithm complexity analysis, software engineering, distributed systems, and artificial intelligence.',
-        courses: ['Data Structures & Algorithms', 'Software Engineering & Design Patterns', 'Database Systems', 'Operating Systems & Networks', 'Artificial Intelligence'],
-    },
+        "degree": "B.S. in Computer Science (Undergraduate)",
+        "institution": "Universidade Federal do Espírito Santo (UFES)",
+        "location": "Vitória, Espírito Santo, Brazil",
+        "status": "In progress · 6th semester",
+        "description": "Computer Science foundations in algorithms, operating systems, and distributed systems. Coauthored academic research on bone age prediction using transfer learning, cross-validation, ensembles, and HiResCAM.",
+        "courses": [
+            "Data Structures & Algorithms",
+            "Software Engineering & Design Patterns",
+            "Operating Systems & Networks",
+            "Distributed and Event-driven Systems",
+            "Applied Deep Learning & Computer Vision"
+        ]
+    }
 ];
 
 export const PROJECTS: Project[] = [
     {
-        id: 'marvin',
-        title: 'Marvin (LabES - UFES)',
-        category: 'Enterprise Academic Management System',
-        description: 'Comprehensive enterprise web system for university academic, teaching, and research management, developed at the Software Engineering Laboratory (LabES - UFES).',
-        highlights: [
-            'Enterprise architecture built on Java, Jakarta EE, and WildFly application server',
-            'Academic artifact and document management using MinIO with AWS S3-compatible API',
-            'Containerized PostgreSQL persistence with Docker orchestration and Maven build lifecycle',
-            'Engineered for high transactional reliability and academic data integrity',
+        "id": "marvin",
+        "title": "Marvin (LabES - UFES)",
+        "category": "Enterprise Academic Management",
+        "description": "Contributing to Marvin at LabES / UFES: an enterprise Java application supporting academic administration, research, and outreach.",
+        "highlights": [
+            "Java EE / Jakarta EE modules using JSF, PrimeFaces, EJB, and CDI events.",
+            "JPA / Hibernate persistence and MinIO / S3 document storage on WildFly.",
+            "Isolated business-logic tests with JUnit 5 and Mockito, developed within a Scrum team."
         ],
-        tags: ['Java', 'Jakarta EE', 'WildFly', 'PostgreSQL', 'MinIO (S3 API)', 'Docker', 'Maven'],
-        demoPath: '',
-        repoPath: MARVIN_REPO_URL,
-        status: 'Maintained',
-        iconType: 'cv',
-        isExternal: true,
-        externalUrl: MARVIN_REPO_URL,
+        "tags": [
+            "Java",
+            "Jakarta EE",
+            "CDI / EJB",
+            "JPA",
+            "JUnit 5",
+            "Mockito"
+        ],
+        "demoPath": "",
+        "repoPath": "https://gitlab.labes.inf.ufes.br/marvin/marvin",
+        "status": "Maintained",
+        "iconType": "cv",
+        "isExternal": true,
+        "externalUrl": "https://gitlab.labes.inf.ufes.br/marvin/marvin"
     },
     {
-        id: 'studex',
-        title: 'Studex',
-        category: 'AI Study Platform & Hybrid RAG',
-        description: 'Gamified educational platform converting study materials (PDFs) into structured summaries, interactive flashcards, and mind maps using local language models and hybrid vector search.',
-        highlights: [
-            'Hybrid RAG pipeline combining Qdrant vector search, BM25 lexical search, and Cohere Rerank',
-            'Local LLM inference orchestration via Ollama (supporting Llama 3.2, Qwen, and Phi-3.5)',
-            'Document extraction and text processing using PyMuPDF with a Flask backend',
-            'Multi-service architecture orchestrated with Docker Compose and reactive React / Mantine UI frontend',
+        "id": "deltasong",
+        "title": "Deltasong",
+        "category": "Interactive Audio & Cloud Services",
+        "description": "A music trivia web app with timed audio challenges, authentication, and a live leaderboard backed by Firebase.",
+        "highlights": [
+            "React and Mantine game flows with playback controlled through the YouTube IFrame API.",
+            "Shared score service separates persistence and business logic from visual components.",
+            "Firebase authentication, cloud persistence, and real-time leaderboard subscriptions."
         ],
-        tags: ['Python', 'Flask', 'React', 'Ollama (Llama 3.2)', 'Qdrant', 'Mantine', 'PyMuPDF', 'Docker'],
-        demoPath: '',
-        repoPath: STUDEX_REPO_URL,
-        status: 'Live',
-        iconType: 'cv',
-        isExternal: true,
-        externalUrl: STUDEX_REPO_URL,
+        "tags": [
+            "React",
+            "Firebase",
+            "Mantine",
+            "Service Pattern",
+            "YouTube API"
+        ],
+        "demoPath": "https://artur-slo.github.io/Deltasong/",
+        "repoPath": "https://github.com/Artur-SLO/Deltasong",
+        "status": "Live",
+        "iconType": "music",
+        "isExternal": true,
+        "externalUrl": "https://artur-slo.github.io/Deltasong/"
     },
     {
-        id: 'face-recognition',
-        title: 'Face Recognition Web App',
-        category: 'Computer Vision & Real-Time Biometrics',
-        description: 'Decoupled web system for real-time facial recognition and biometric enrollment with low latency full-duplex video streaming and strict LGPD compliance.',
-        highlights: [
-            'Full-duplex real-time video frame streaming via WebSockets (Flask-SocketIO and native sockets)',
-            'Facial feature extraction and ground-truth vector matching using dlib and OpenCV',
-            'Explicit user consent validation and biometric data protection adhering to LGPD standards',
-            'Componentized React (Vite) interface with HTML5 Canvas capture and CSS Modules isolation',
+        "id": "studex",
+        "title": "Studex",
+        "category": "AI Study Platform & RAG",
+        "description": "A study platform that turns PDFs into summaries, flashcards, and mind maps through local language models and vector retrieval.",
+        "highlights": [
+            "PyMuPDF extraction and Qdrant retrieval with local inference through Ollama.",
+            "Parallel document indexing and material generation, with map-reduce summarization for larger documents.",
+            "Reused chunks, batched embeddings, and a multi-service environment orchestrated with Docker Compose."
         ],
-        tags: ['Python', 'Flask', 'OpenCV', 'dlib', 'WebSockets', 'React', 'Vite', 'LGPD'],
-        demoPath: '',
-        repoPath: FACE_RECOG_REPO_URL,
-        status: 'Live',
-        iconType: 'game',
-        isExternal: true,
-        externalUrl: FACE_RECOG_REPO_URL,
+        "tags": [
+            "React",
+            "Python",
+            "Flask",
+            "Qdrant",
+            "Ollama",
+            "Docker"
+        ],
+        "demoPath": "",
+        "repoPath": "https://github.com/lewislf/studex",
+        "status": "Maintained",
+        "iconType": "cv",
+        "isExternal": true,
+        "externalUrl": "https://github.com/lewislf/studex"
     },
     {
-        id: 'deltasong',
-        title: 'Deltasong',
-        category: 'Full-Stack Audio Trivia Game',
-        description: 'Interactive audio deduction and musical trivia web game based on DELTARUNE soundtrack, featuring cloud-synced global leaderboards and user authentication.',
-        highlights: [
-            'Custom algorithm for dynamic millisecond-precision audio snippet slicing and challenge generation',
-            'Cloud persistence and authentication with Firebase Firestore security rules',
-            'Immersive Dark World UI crafted with Mantine UI v9, React Router, and React 19',
-            'Audio data processing and track automation powered by Python scripts',
+        "id": "face-recognition",
+        "title": "Face Recognition Web App",
+        "category": "Computer Vision & Biometric Enrollment",
+        "description": "A decoupled facial recognition application with React, Flask APIs, and a dedicated native TCP socket service for HTTP frame processing.",
+        "highlights": [
+            "OpenCV / dlib face embeddings, vector matching, and a NumPy fallback.",
+            "Smaller recognition inputs and cached recognition results reduce repeated processing.",
+            "Explicit consent checks in the enrollment interface and API for responsible biometric data handling."
         ],
-        tags: ['React 19', 'Firebase Firestore', 'Mantine UI', 'React Router', 'Python'],
-        demoPath: DELTASONG_LIVE_URL,
-        repoPath: DELTASONG_REPO_URL,
-        status: 'Live',
-        iconType: 'music',
-        isExternal: true,
-        externalUrl: DELTASONG_LIVE_URL,
+        "tags": [
+            "React",
+            "Python",
+            "Flask",
+            "TCP sockets",
+            "OpenCV",
+            "dlib"
+        ],
+        "demoPath": "",
+        "repoPath": "https://github.com/FeLiPeOLi7/FaceRecognitionApp/tree/main",
+        "status": "Maintained",
+        "iconType": "game",
+        "isExternal": true,
+        "externalUrl": "https://github.com/FeLiPeOLi7/FaceRecognitionApp/tree/main"
     },
     {
-        id: 'shopping-cart',
-        title: 'Shopping Cart',
-        category: 'E-Commerce Platform',
-        description: 'Full-featured e-commerce platform featuring dynamic product fetching, global cart state management, checkout summary calculations, and comprehensive Vitest unit tests.',
-        highlights: [
-            'Reactive cart state management with real-time quantity adjustments and item removals',
-            'Asynchronous catalog fetching from FakeStore API with robust loading and error states',
-            'Complete unit and integration test coverage using Vitest and React Testing Library',
+        "id": "shopping-cart",
+        "title": "Shopping Cart",
+        "category": "E-Commerce Platform",
+        "description": "An e-commerce interface with a dynamic catalog, shared cart state, responsive checkout summaries, and behavior tests.",
+        "highlights": [
+            "Shared React state for quantities, item removal, and checkout totals.",
+            "FakeStore API integration with loading and error states.",
+            "Behavior tests using Vitest and React Testing Library."
         ],
-        tags: ['React 19', 'React Router', 'Vitest', 'FakeStore API', 'CSS'],
-        demoPath: 'Shopping-Cart/',
-        repoPath: `${REPO_BASE_URL}/tree/main/Projects/React/Shopping-Cart`,
-        status: 'Live',
-        iconType: 'cart',
+        "tags": [
+            "React 19",
+            "React Router",
+            "Vitest",
+            "FakeStore API",
+            "CSS"
+        ],
+        "demoPath": "Shopping-Cart/",
+        "repoPath": "https://github.com/Artur-SLO/WebDev/tree/main/Projects/React/Shopping-Cart",
+        "status": "Live",
+        "iconType": "cart"
     },
     {
-        id: 'cv-application',
-        title: 'CV Application',
-        category: 'Document & Resume Generator',
-        description: 'Interactive curriculum vitae generator featuring step-by-step wizard navigation, instant edit mode, and responsive print engine tailored for PDF export.',
-        highlights: [
-            'Sequential wizard with interactive stepper progress bar and full-screen edit mode',
-            'Responsive print CSS engine removing navigation and toolbar elements during export',
-            'Centralized form state management for personal, educational, and experience details',
+        "id": "cv-application",
+        "title": "CV Application",
+        "category": "Document & Resume Generator",
+        "description": "A guided résumé builder with live editing, centralized form state, and a dedicated print layout for PDF export.",
+        "highlights": [
+            "Sequential wizard with interactive stepper progress bar and full-screen edit mode",
+            "Responsive print CSS engine removing navigation and toolbar elements during export",
+            "Centralized form state management for personal, educational, and experience details"
         ],
-        tags: ['React 19', 'Vite', 'State Management', 'Print API', 'CSS'],
-        demoPath: 'CV-Application/',
-        repoPath: `${REPO_BASE_URL}/tree/main/Projects/React/CV%20Application`,
-        status: 'Live',
-        iconType: 'cv',
-    },
+        "tags": [
+            "React 19",
+            "Vite",
+            "State Management",
+            "Print API",
+            "CSS"
+        ],
+        "demoPath": "CV-Application/",
+        "repoPath": "https://github.com/Artur-SLO/WebDev/tree/main/Projects/React/CV%20Application",
+        "status": "Live",
+        "iconType": "cv"
+    }
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
     {
-        title: 'Enterprise Backend & Systems',
-        description: 'Production-grade enterprise architectures, application servers, relational modeling, and object storage.',
-        skills: [
-            'Java & Jakarta EE',
-            'WildFly Application Server',
-            'PostgreSQL & Schema Migrations',
-            'MinIO (AWS S3-compatible API)',
-            'Apache Maven Build Tooling',
-            'Python & Flask Microservices',
-            'WebSockets & REST APIs',
-        ],
+        "title": "Frontend & Interactive Applications",
+        "description": "Responsive React interfaces, typed components, application state, and interactive media.",
+        "skills": [
+            "React & TypeScript",
+            "JavaScript & CSS Modules",
+            "Mantine UI & React Router",
+            "State Management & Service Pattern",
+            "YouTube IFrame API & Canvas",
+            "Vitest & React Testing Library"
+        ]
     },
     {
-        title: 'AI, RAG & Computer Vision',
-        description: 'Retrieval-Augmented Generation pipelines, vector databases, local LLM orchestration, and real-time biometrics.',
-        skills: [
-            'Hybrid RAG (Vector + BM25 Lexical)',
-            'Qdrant Vector Database',
-            'Ollama (Llama 3.2, Qwen, Phi-3.5)',
-            'PyMuPDF Document Extraction',
-            'OpenCV & dlib Biometric Embeddings',
-            'Full-Duplex Frame Streaming',
-            'LGPD Compliance & Data Privacy',
-        ],
+        "title": "Backend & Enterprise Engineering",
+        "description": "Business logic, persistence, and connected application services.",
+        "skills": [
+            "Java & Jakarta EE",
+            "EJB / CDI & JPA / Hibernate",
+            "Python / Flask & Node.js",
+            "PostgreSQL & MinIO (S3 API)",
+            "Firebase Authentication & Persistence",
+            "JUnit 5 & Mockito"
+        ]
     },
     {
-        title: 'Modern Frontend Engineering',
-        description: 'Component-driven reactive architectures, static typing, state management, and rich interactive media.',
-        skills: [
-            'React 19 & Custom Hooks',
-            'TypeScript Interfaces & Generics',
-            'Mantine UI v9 & CSS Modules',
-            'React Router SPA Architecture',
-            'Firebase Firestore & Cloud Auth',
-            'HTML5 Canvas & Web Audio API',
-            'Responsive UI & Accessibility',
-        ],
+        "title": "AI, Retrieval & Computer Vision",
+        "description": "Local model inference, document pipelines, and computer vision applications.",
+        "skills": [
+            "RAG & Qdrant Vector Search",
+            "Ollama & Local LLMs",
+            "PyMuPDF & Document Processing",
+            "Parallel Pipelines & Map-reduce",
+            "OpenCV / dlib & Face Embeddings",
+            "Transfer Learning & HiResCAM"
+        ]
     },
     {
-        title: 'DevOps & Quality Assurance',
-        description: 'Containerization, automated continuous delivery, software test automation, and developer workflows.',
-        skills: [
-            'Docker & Docker Compose',
-            'GitHub Actions CI/CD Workflows',
-            'Vitest & Jest Unit Testing',
-            'PyTest Python Testing Suite',
-            'Test-Driven Development (TDD)',
-            'Git, GitHub & GitLab Collaboration',
-            'Vite Engine & Modern Toolchains',
-        ],
-    },
-    {
-        title: 'Computer Science Foundations',
-        description: 'Rigorous theoretical foundations in core data structures, graph algorithms, and clean software architecture.',
-        skills: [
-            'Data Structures (Trees, Graphs, HashMaps)',
-            'Algorithms (BFS, DFS, Dijkstra, Sorting)',
-            'Asymptotic Complexity (Big-O Analysis)',
-            'Object-Oriented Analysis & Design',
-            'Modular Systems & Clean Architecture',
-        ],
-    },
+        "title": "Systems, Tooling & Foundations",
+        "description": "Computer science fundamentals, reproducible environments, and collaborative development.",
+        "skills": [
+            "C, Linux & Operating Systems",
+            "Data Structures & Algorithms",
+            "Distributed Systems & Apache Kafka",
+            "Docker & Docker Compose",
+            "GitHub Actions & Git / GitLab",
+            "Scrum & Peer Code Reviews"
+        ]
+    }
 ];

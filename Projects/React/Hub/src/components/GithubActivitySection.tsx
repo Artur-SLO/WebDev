@@ -9,7 +9,7 @@ interface UserProfile {
     name: string;
     login: string;
     avatarUrl: string;
-    publicRepos: number;
+    publicRepos: number | null;
     followers: number;
 }
 
@@ -18,7 +18,7 @@ export const GithubActivitySection: React.FC = () => {
         name: 'Artur Vítor',
         login: 'Artur-SLO',
         avatarUrl: 'https://avatars.githubusercontent.com/u/155112487?v=4',
-        publicRepos: 10,
+        publicRepos: null,
         followers: 0,
     });
 
@@ -34,7 +34,7 @@ export const GithubActivitySection: React.FC = () => {
                             name: data.name || 'Artur Vítor',
                             login: data.login || 'Artur-SLO',
                             avatarUrl: data.avatar_url || 'https://avatars.githubusercontent.com/u/155112487?v=4',
-                            publicRepos: data.public_repos ?? 10,
+                            publicRepos: data.public_repos ?? null,
                             followers: data.followers ?? 0,
                         });
                     }
@@ -60,7 +60,7 @@ export const GithubActivitySection: React.FC = () => {
                 <span className={commonStyles.sectionEyebrow}>Open Source</span>
                 <h2 className={commonStyles.sectionTitle}>GitHub Contributions & Activity</h2>
                 <p className={commonStyles.sectionSubtitle}>
-                    Live contributions heatmap and repository metrics powered by the official GitHub profile data.
+                    Explore ongoing contributions and repository activity beyond the featured projects.
                 </p>
             </div>
 
@@ -68,17 +68,17 @@ export const GithubActivitySection: React.FC = () => {
                 {/* Profile Header Bar */}
                 <div className={styles.profileTopBar}>
                     <div className={styles.authorGroup}>
-                        <img 
-                            src={profile.avatarUrl} 
-                            alt={profile.name} 
-                            className={styles.avatar} 
+                        <img
+                            src={profile.avatarUrl}
+                            alt={profile.name}
+                            className={styles.avatar}
                             loading="lazy"
                         />
                         <div className={styles.authorMeta}>
                             <span className={styles.authorName}>{profile.name}</span>
-                            <a 
-                                href={`https://github.com/${profile.login}`} 
-                                target="_blank" 
+                            <a
+                                href={`https://github.com/${profile.login}`}
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.authorHandle}
                             >
@@ -90,9 +90,9 @@ export const GithubActivitySection: React.FC = () => {
                     <div className={styles.repoStatsRow}>
                         <span className={styles.statPill}>
                             <CodeBracketIcon size={14} />
-                            <span>{profile.publicRepos} Public Repositories</span>
+                            <span>{profile.publicRepos === null ? 'Explore public repositories' : `${profile.publicRepos} Public Repositories`}</span>
                         </span>
-                        <a 
+                        <a
                             href={REPO_BASE_URL}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -115,6 +115,7 @@ export const GithubActivitySection: React.FC = () => {
                     <div className={styles.calendarWrapper}>
                         <GitHubCalendar
                             username="Artur-SLO"
+                            errorMessage="Activity is unavailable right now. Explore the repositories using the links above."
                             colorScheme="dark"
                             theme={calendarTheme}
                             fontSize={12}

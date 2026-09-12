@@ -147,3 +147,5 @@
 .calendarWrapper svg {
     max-width: 100%;
 }
+
+@media(max-width: 540px) { .profileCard { padding: 1.5rem 1.25rem; }.calendarWrapper { padding: .75rem; }.authorGroup { gap: .8rem; }.authorName { font-size: 1.1rem; } }

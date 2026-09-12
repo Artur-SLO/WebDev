@@ -1,30 +1,26 @@
 # Portfolio Hub
 
-The central landing page and project directory for the [WebDev](https://github.com/Artur-SLO/WebDev) repository, deployed at [https://artur-slo.github.io/WebDev/](https://artur-slo.github.io/WebDev/).
+Artur Vítor’s portfolio and project directory for [WebDev](https://github.com/Artur-SLO/WebDev), built with React, TypeScript, Vite, and CSS Modules.
 
-## Overview
+The original centered hero, dark palette, gradient buttons, and project cards are preserved. The updated header adds an active-section indicator, direct profile links, keyboard navigation, and an animated mobile disclosure menu. Scroll reveals use IntersectionObserver and CSS, with no extra runtime animation or UI dependency. Content remains visible without IntersectionObserver; reduced-motion preferences disable the animation.
 
-Built with React 19, TypeScript, and Vite, this application serves as the home showcase for all interactive web development projects, featuring live links, repository source code references, core competency pillars, and a real-time GitHub activity contribution heatmap.
+## Content and layout
 
-## Features
+- Introduction → projects → experience and education → competencies → GitHub activity.
+- Marvin and Deltasong lead the project grid, followed by Studex, Face Recognition, Shopping Cart, and CV Application.
+- Source-only projects have a repository action; live applications retain their demo links.
+- Project descriptions emphasize verified implementation details: CDI / JUnit / Mockito, Qdrant / Ollama, native TCP sockets, and Firebase / shared services.
+- Repeated project summaries were removed from the experience section. GitHub failures never substitute invented repository counts.
 
-- **Interactive Project Showcase:** Highlighting `Shopping-Cart`, `CV Application`, and `Memory Card Game` with live demos and direct source links.
-- **Unified Design System:** Built with modern CSS Modules inspired by the Shopping-Cart project, tailored with deep dark elegance and responsive layouts.
-- **GitHub Live Integration:** Real-time contribution graph and profile stats powered by `react-github-calendar` and the GitHub API.
-- **Type-Safe Architecture:** Strict TypeScript definitions for projects, skills, and components.
+Edit project and career information in `src/data/projects.ts`, and header labels in `src/data/navigation.ts`. Header behavior is split between `components/Navbar.tsx` and `hooks/useActiveSection.ts`; reusable scroll animation lives in `components/Reveal.tsx`.
 
 ## Development
 
 ```bash
-# Install dependencies
-npm install
-
-# Start development server
+npm ci
 npm run dev
-
-# Build for production
 npm run build
-
-# Run linter
 npm run lint
 ```
+
+The app retains the `/WebDev/` base path and the existing GitHub Pages deployment structure. Validate changes with `npm run build`, `npm run lint`, and a manual review of desktop/mobile layouts, keyboard navigation, and reduced-motion behavior.

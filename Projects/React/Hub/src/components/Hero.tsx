@@ -1,11 +1,11 @@
 import React from 'react';
 import { LayersIcon, CodeBracketIcon, TerminalIcon, GithubIcon, LinkedinIcon } from './Icons';
-import { REPO_BASE_URL, LINKEDIN_URL } from '../data/projects';
+import { GITHUB_PROFILE_URL, LINKEDIN_URL, USER_PROFILE, PROJECTS } from '../data/projects';
 import styles from '../styles/Hero.module.css';
 
 export const Hero: React.FC = () => {
     return (
-        <section id="hero" className={styles.heroSection}>
+        <section id="hero" tabIndex={-1} className={styles.heroSection}>
             <div className={styles.heroBadge}>
                 <span className={styles.badgePulse}></span>
                 <span>Computer Science @ UFES · Software Engineering Intern @ LabES</span>
@@ -16,40 +16,37 @@ export const Hero: React.FC = () => {
             </h1>
 
             <p className={styles.heroSubtitle}>
-                Computer Science undergraduate at UFES and Software Engineering Intern at LabES. 
-                Experienced in enterprise systems (Marvin with Java and Jakarta EE), AI study platforms 
-                (Studex with RAG and local LLMs), computer vision (Face Recognition with WebSockets), 
-                and modern interactive web applications.
+                {USER_PROFILE.summary}
             </p>
 
             <div className={styles.heroActions}>
                 <a href="#projects" className={`btn btnPrimary ${styles.primaryCta}`}>
                     View Projects
                 </a>
-                <a 
-                    href={LINKEDIN_URL} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                <a
+                    href={LINKEDIN_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`btn btnSecondary ${styles.secondaryCta}`}
                 >
                     <LinkedinIcon size={16} />
                     <span>LinkedIn</span>
                 </a>
-                <a 
-                    href={REPO_BASE_URL} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                <a
+                    href={GITHUB_PROFILE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`btn btnSecondary ${styles.secondaryCta}`}
                 >
                     <GithubIcon size={16} />
-                    <span>Repository</span>
+                    <span>GitHub</span>
                 </a>
             </div>
 
             <div className={styles.metaRow}>
                 <span className={styles.metaItem}>
                     <LayersIcon size={15} className={styles.metaIcon} />
-                    <span>6 Featured Projects</span>
+                    <span>{PROJECTS.length} Featured Projects</span>
                 </span>
                 <span className={styles.metaItem}>
                     <CodeBracketIcon size={15} className={styles.metaIcon} />
